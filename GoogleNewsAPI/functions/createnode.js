@@ -19,7 +19,7 @@ export const createnode = (article) =>{
   today = month + '/' + day + '/' + year;
   
   div.classList.add('news-card');
-  img.src = article.urlToImage;
+  img.src = article.image;
   div1.classList.add('news_text-container');
   p.classList.add('news-source-name');
   p.textContent = article.source.name;
