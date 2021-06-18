@@ -1,0 +1,117 @@
+$primary: #2a2a72;
+$degradate: 315deg, #2a2a72 0%, #009ffd 74%;
+header{
+  width: 100%;
+  height: 15rem;
+  background-color: $primary;
+  background-image: linear-gradient($degradate);
+  h1{
+  color: white;
+  padding: 4rem;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 5rem;
+  float: left;
+  }
+}
+.news{
+  margin: 1rem 0;
+  min-width: 320px;
+  &-card{
+    margin-top: 5rem;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 2rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 5px 15px rgba(51, 51, 51, 0.5);
+    transition: 1s;
+  }
+  &-card:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 10px 15px rgba(51, 51, 51, 0.5);
+  }
+  &-container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    img{
+      width: 50%;
+      margin-bottom: -1rem;
+      border-radius: 2rem 2rem 2rem 2rem;
+    }
+  }
+  
+  &_text-container{
+    padding: 5rem;
+  }
+
+  &-source-name{
+    font-size: 1.3rem;
+    margin: 1.5rem;
+    font-weight: 400;
+  }
+  
+  &-title{
+    letter-spacing: .1rem;
+    font-size: 2rem;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 1000;
+  }
+  &-description{
+    font-size: 1.5rem;
+    text-align: justify;
+    margin: 2rem;
+    }
+  &-date{
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    float: right;
+    color: rgb(170, 170, 170);
+  }
+
+}
+.button{
+  &-container{
+    margin: 5rem auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  &-padding{
+    border-radius: 2rem;
+    margin-top: 100rem;
+    font-size: 2rem;
+    padding: 1rem;
+    background-color: #009ffd;
+    margin: 0 auto;
+    color:#ffffff;
+  }
+  &-padding:hover{
+    margin-top: 100rem;
+    font-size: 2rem;
+    padding: 1rem;
+    background-color: #0083d0;
+    margin: 0 auto;
+  }
+}
+
+footer{
+  width: 100%;
+  height: 10rem;
+  background-color: $primary;
+  background-image: linear-gradient($degradate);
+}
+.dipa{
+  position: absolute;
+  left: 0;
+  color: white;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.5rem;
+}
