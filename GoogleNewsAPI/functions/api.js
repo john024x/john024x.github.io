@@ -1,5 +1,5 @@
 export async function fetchdata() {  
-  const res = await fetch("https://newsapi.org/v2/everything?q=digital+economy&apiKey=b1ede5f9baf244709c60f4036f1c81b4")
+  const res = await fetch("https://gnews.io/api/v4/top-headlines?token=fbceae1008e3cf9c8c1f606bb16f74bd&lang=en")
   
   if (res.ok) {
     return await res.json();
