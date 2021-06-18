@@ -1,19 +1,36 @@
-const API = "https://gnews.io/api/v4/top-headlines?token=fbceae1008e3cf9c8c1f606bb16f74bd&lang=en";
-fetch("https://gnews.io/api/v4/top-headlines?token=fbceae1008e3cf9c8c1f606bb16f74bd&lang=en")
-    .then(res => res.json())
-    .then(data => {
-        console.log(data.articles);
-        let data_articles = data.articles;
-        data_articles.forEach(element => {
-            console.log('//////////////////');
-            console.log(element.title);
-            let titulo = element.title
-            console.log(element.description);
-            let description = element.description;
-            console.log(element.url);
-            console.log(element.publishedAt);
-            console.log(element.source['name']);
-            console.log(element.image);
-            console.log('//////////////////');
-        });
+import {createnode} from './functions/createnode.js'
+import {fetchdata} from './functions/api.js'
+
+let button = document.getElementById('btn-reload');
+let i = 0;
+let n = 1;
+let parend = document.getElementById('news-container');
+var datas = []
+fetchdata().then((data) => {
+  datas = data.articles.map(article =>{
+    if(i < n){
+        createnode(article);
+        i++
+      }
+      })
+  })
+
+button.addEventListener('click', () =>{
+  n += 3
+  call_data();
+})
+
+const call_data = () =>{
+  parend.innerHTML = '';
+  fetchdata().then((data) => {
+  let newData = data.articles.map(article =>{
+    if(i < n){
+        createnode(article)
+        i++
+      }
+      })
     })
+}
+
+  
+ 
